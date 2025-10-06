@@ -8,7 +8,7 @@
   <div>This version includes Flash Attn </div>
 <ul>
   <li>python -m venv venv</li>
-  <li>venv\Scripts\activate</li>
+  <li>call venv\Scripts\activate</li>
   <li>python -m pip install --upgrade pip setuptools wheel</li>
   <li>pip install typing_extensions==4.12.2</li>
   <li>pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu129</li>
