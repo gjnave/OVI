@@ -22,6 +22,7 @@
   <li>pip install "triton-windows&lt;3.5"</li>
   <li>pip install -r requirements.txt</li>
   <li>mkdir ckpts\Ovi</li>
+  <li>python download_weights.py --output-dir ckpts</li>
   <li>curl -L -o "ckpts\Ovi\model_fp8_e4m3fn.safetensors" ^
     "https://huggingface.co/rkfg/Ovi-fp8_quantized/resolve/main/model_fp8_e4m3fn.safetensors"</li>
   <li>mkdir ckpts\Wan2.2-TI2V-5B</li>
