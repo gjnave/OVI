@@ -1,3 +1,38 @@
+<img width="1108" height="443" alt="image" src="https://github.com/gjnave/VibeVoice/blob/main/assets/yout.jpg" />
+
+
+<h1>A GET GOING FAST (Quick) Installation can be found here: <a href="https://ovi.getgoingfast.pro">ovi.getgoingfast.pro</a></h1>
+<p>
+<h2>To install Manually:</h2>
+<p>
+  <div>This version includes Flash Attn </div>
+<ul>
+  <li>python -m venv venv</li>
+  <li>venv\Scripts\activate</li>
+  <li>python -m pip install --upgrade pip setuptools wheel</li>
+  <li>pip install typing_extensions==4.12.2</li>
+  <li>pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu129</li>
+  <li>pip install gradio transformers huggingface-hub tqdm safetensors numpy pyyaml requests pillow soundfile librosa einops</li>
+    <div><b>Choose the correct Flash Attention dependant on your Python version</b></div></div>
+  <li>pip install https://github.com/gjnave/support-files/raw/main/support/wheels/py310/flash_attn-2.8.2-cp310-cp310-win_amd64.whl</li>
+  <li>pip install https://github.com/gjnave/support-files/raw/main/support/wheels/py311/flash_attn-2.8.2-cp311-cp311-win_amd64.whl</li>
+  <li>pip install https://github.com/gjnave/support-files/raw/main/support/wheels/py312/flash_attn-2.8.2-cp312-cp312-win_amd64.whl</li>
+  <li>pip install https://github.com/gjnave/support-files/raw/main/support/wheels/py313/flash_attn-2.8.2-cp313-cp313-win_amd64.whl</li>
+  <li>pip install insightface==0.7.3</li>
+  <li>pip install "triton-windows&lt;3.5"</li>
+  <li>pip install -r requirements.txt</li>
+  <li>mkdir ckpts\Ovi</li>
+  <li>curl -L -o "ckpts\Ovi\model_fp8_e4m3fn.safetensors" ^
+    "https://huggingface.co/rkfg/Ovi-fp8_quantized/resolve/main/model_fp8_e4m3fn.safetensors"</li>
+  <li>mkdir ckpts\Wan2.2-TI2V-5B</li>
+  <li>curl -L -o "ckpts\Wan2.2-TI2V-5B\Wan2.2_VAE.pth" ^
+    "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.pth"</li>
+</ul>
+</p>
+<p>Remember to activate Python Virtual Environment each Time you Run:</p>
+<p>Use: python gradio_app.py --cpu_offload --fp8 </p>
+
+
 <div align="center">
 <h1> Ovi: Twin Backbone Cross-Modal Fusion for Audio-Video Generation </h1>
 
@@ -78,52 +113,6 @@ For easy prompt creation, try this approach:
 - `<S>We fight back with courage.<E>`
 
 ---
-
-
-## 📦 Installation
-
-### Step-by-Step Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/character-ai/Ovi.git
-
-cd Ovi
-
-# Create and activate virtual environment
-virtualenv ovi-env
-source ovi-env/bin/activate
-
-# Install PyTorch first
-pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1
-
-# Install other dependencies
-pip install -r requirements.txt
-
-# Install Flash Attention
-pip install flash_attn --no-build-isolation
-```
-
-### Alternative Flash Attention Installation (Optional)
-If the above flash_attn installation fails, you can try the Flash Attention 3 method:
-```bash
-git clone https://github.com/Dao-AILab/flash-attention.git
-cd flash-attention/hopper
-python setup.py install
-cd ../..  # Return to Ovi directory
-```
-
-## Download Weights
-We use open-sourced checkpoints from Wan and MMAudio, and thus we will need to download them from huggingface
-```
-# Default is downloaded to ./ckpts, and the inference yaml is set to ./ckpts so no change required
-python3 download_weights.py
-
-OR
-
-# Optional can specific --output-dir to download to a specific directory
-# but if a custom directory is used, the inference yaml has to be updated with the custom directory
-python3 download_weights.py --output-dir <custom_dir>
 
 # Additionally, if you only have ~ 24Gb of GPU vram, please download the fp8 quantized version of the model, and follow the following instructions in sections below to run with fp8
 wget -O "./ckpts/Ovi/model_fp8_e4m3fn.safetensors" "https://huggingface.co/rkfg/Ovi-fp8_quantized/resolve/main/model_fp8_e4m3fn.safetensors"
