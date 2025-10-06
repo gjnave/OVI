@@ -22,12 +22,11 @@
   <li>pip install "triton-windows&lt;3.5"</li>
   <li>pip install -r requirements.txt</li>
   <li>mkdir ckpts\Ovi</li>
-  <li>python download_weights.py --output-dir ckpts</li>
   <li>curl -L -o "ckpts\Ovi\model_fp8_e4m3fn.safetensors" ^
     "https://huggingface.co/rkfg/Ovi-fp8_quantized/resolve/main/model_fp8_e4m3fn.safetensors"</li>
   <li>mkdir ckpts\Wan2.2-TI2V-5B</li>
   <li>curl -L -o "ckpts\Wan2.2-TI2V-5B\Wan2.2_VAE.pth" ^
-    "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.pth"</li>
+    "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors"</li>
 </ul>
 </p>
 <p>Remember to activate Python Virtual Environment each Time you Run:</p>
