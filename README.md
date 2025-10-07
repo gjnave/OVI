@@ -27,7 +27,7 @@
     "https://huggingface.co/rkfg/Ovi-fp8_quantized/resolve/main/model_fp8_e4m3fn.safetensors"</li>
   <li>mkdir ckpts\Wan2.2-TI2V-5B</li>
   <li>curl -L -o "ckpts\Wan2.2-TI2V-5B\Wan2.2_VAE.pth" ^
-    "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors"</li>
+    "[https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/resolve/main/Wan2.2_VAE.pth)"</li>
 </ul>
 </p>
 <p>Remember to activate Python Virtual Environment each Time you Run:</p>
