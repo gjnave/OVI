@@ -21,6 +21,7 @@
   <li>pip install insightface==0.7.3</li>
   <li>pip install "triton-windows&lt;3.5"</li>
   <li>pip install -r requirements.txt</li>
+  <li>python download_weights.py --output-dir ckpts</li>
   <li>mkdir ckpts\Ovi</li>
   <li>curl -L -o "ckpts\Ovi\model_fp8_e4m3fn.safetensors" ^
     "https://huggingface.co/rkfg/Ovi-fp8_quantized/resolve/main/model_fp8_e4m3fn.safetensors"</li>
